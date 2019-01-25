@@ -1,0 +1,7 @@
+*.txt
+*.xml
+*.cfg
+*.usp
+*.h
+*.tmp
+*.usr
