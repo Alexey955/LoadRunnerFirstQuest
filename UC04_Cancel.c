@@ -1,26 +1,26 @@
 UC04_Cancel()
 {
+	lr_think_time(10);
 
-	lr_think_time(35);
+	lr_start_transaction("UC04_TR00_CancelPlease");
 
-	lr_start_transaction("UC04_TR01_Cancel_Order");
-
+	web_reg_find("Text=No flights have been reserved.", LAST);
 	web_submit_data("itinerary.pl", 
 		"Action=http://localhost:1080/cgi-bin/itinerary.pl", 
 		"Method=POST", 
 		"TargetFrame=", 
 		"RecContentType=text/html", 
 		"Referer=http://localhost:1080/cgi-bin/itinerary.pl", 
-		"Snapshot=t56.inf", 
+		"Snapshot=t66.inf", 
 		"Mode=HTML", 
 		ITEMDATA, 
-		"Name=flightID", "Value=160041495-798-JB", ENDITEM, 
+		"Name=flightID", "Value=0-0-1B", ENDITEM, 
 		"Name=.cgifields", "Value=1", ENDITEM, 
-		"Name=removeAllFlights.x", "Value=63", ENDITEM, 
-		"Name=removeAllFlights.y", "Value=9", ENDITEM, 
+		"Name=removeAllFlights.x", "Value=71", ENDITEM, 
+		"Name=removeAllFlights.y", "Value=13", ENDITEM, 
 		LAST);
 
-	lr_end_transaction("UC04_TR01_Cancel_Order",LR_AUTO);
+	lr_end_transaction("UC04_TR00_CancelPlease",LR_AUTO);
 
 	return 0;
 }

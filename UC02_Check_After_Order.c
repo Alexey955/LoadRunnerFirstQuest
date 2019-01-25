@@ -1,10 +1,11 @@
 UC02_Check_After_Order()
 {
 
-	lr_think_time(35);
+	lr_think_time(10);
 
-	lr_start_transaction("UCO2_TR01_Button_Itinerary");
+	lr_start_transaction("UCO2_TR00_Button_Itinerary");
 
+	web_reg_find("Text=Flight Transaction Summary", LAST);
 	web_url("welcome.pl_2", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
 		"TargetFrame=", 
@@ -15,7 +16,7 @@ UC02_Check_After_Order()
 		"Mode=HTML", 
 		LAST);
 
-	lr_end_transaction("UCO2_TR01_Button_Itinerary",LR_AUTO);
+	lr_end_transaction("UCO2_TR00_Button_Itinerary",LR_AUTO);
 
 	return 0;
 }

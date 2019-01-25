@@ -2560,8 +2560,10 @@ void
 
 
 
+
  
  
+
 
 
 
@@ -2606,12 +2608,11 @@ vuser_init()
 		"Url=https://www.bing.com/favicon.ico", "Referer=", "ENDITEM", 
 		"LAST");
 
- 
+	lr_think_time(10);
 
-	lr_think_time(17);
+	lr_start_transaction("UC00_TR00_Login");
 
-	lr_start_transaction("UC00_TR01_Login");
-
+	web_reg_find("Text=Using the menu to the left", "LAST");
 	web_submit_data("login.pl", 
 		"Action=http://localhost:1080/cgi-bin/login.pl", 
 		"Method=POST", 
@@ -2622,14 +2623,14 @@ vuser_init()
 		"Mode=HTML", 
 		"ITEMDATA", 
 		"Name=userSession", "Value={userSession}", "ENDITEM", 
-		"Name=username", "Value=jojo", "ENDITEM", 
-		"Name=password", "Value=bean", "ENDITEM", 
+		"Name=username", "Value={Login}", "ENDITEM", 
+		"Name=password", "Value={Password}", "ENDITEM", 
 		"Name=JSFormSubmit", "Value=off", "ENDITEM", 
 		"Name=login.x", "Value=27", "ENDITEM", 
 		"Name=login.y", "Value=6", "ENDITEM", 
 		"LAST");
 
-	lr_end_transaction("UC00_TR01_Login",2);
+	lr_end_transaction("UC00_TR00_Login",2);
 
 	return 0;
 }
@@ -2638,11 +2639,22 @@ vuser_init()
 # 1 "UC01_Find_Flight.c" 1
 UC01_Find_Flight()
 {
+	int randNumOne;
+	
+	int randNumTwo;
+	
+	lr_think_time(10);
 
-	lr_think_time(22);
+	lr_start_transaction("UC01_TR00_Button_Flights");
+	
+	 
+	web_reg_save_param("CityListParameter",
+	                   "LB=\">",
+	                   "RB=</option>",
+	                   "Ord=All",
+	                   "LAST");
 
-	lr_start_transaction("UC01_TR01_Button_Flights");
-
+	web_reg_find("Text=Departure City", "LAST");
 	web_url("welcome.pl", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=search", 
 		"TargetFrame=", 
@@ -2653,12 +2665,25 @@ UC01_Find_Flight()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_end_transaction("UC01_TR01_Button_Flights",2);
+	lr_end_transaction("UC01_TR00_Button_Flights",2);
 
-	lr_think_time(51);
+	lr_think_time(10);
+	
+	lr_save_string(lr_paramarr_random("CityListParameter"),"DepartureCity");
+	lr_save_string(lr_paramarr_random("CityListParameter"),"ArrivalCity");
+	
+	while(strcmp("{DepartureCity}", "{ArrivalCity}")==0)
+		lr_save_string(lr_paramarr_random("CityListParameter"),"ArrivalCity");
 
-	lr_start_transaction("UC01_Fill_Find_Flight");
-
+	lr_start_transaction("UC01_TR01_Fill_Find_Flight");
+	
+	randNumOne = rand()%10 +1;
+	lr_save_datetime("%m/%d/%Y", (0 + 86400*randNumOne), "DepartureDate");
+	
+	randNumTwo = rand()%10 +1;
+	lr_save_datetime("%m/%d/%Y", (0 + 86400*randNumOne + 86400 +randNumTwo), "ReturnDate");
+	
+	web_reg_find("Text=Flight departing from", "LAST");
 	web_submit_data("reservations.pl", 
 		"Action=http://localhost:1080/cgi-bin/reservations.pl", 
 		"Method=POST", 
@@ -2669,13 +2694,13 @@ UC01_Find_Flight()
 		"Mode=HTML", 
 		"ITEMDATA", 
 		"Name=advanceDiscount", "Value=0", "ENDITEM", 
-		"Name=depart", "Value=Frankfurt", "ENDITEM", 
-		"Name=departDate", "Value=01/26/2019", "ENDITEM", 
-		"Name=arrive", "Value=London", "ENDITEM", 
-		"Name=returnDate", "Value=01/27/2019", "ENDITEM", 
+		"Name=depart", "Value={DepartureCity}", "ENDITEM", 
+		"Name=departDate", "Value={DepartureDate}", "ENDITEM", 
+		"Name=arrive", "Value={ArrivalCity}", "ENDITEM", 
+		"Name=returnDate", "Value={ReturnDate}", "ENDITEM", 
 		"Name=numPassengers", "Value=1", "ENDITEM", 
-		"Name=seatPref", "Value=Window", "ENDITEM", 
-		"Name=seatType", "Value=Business", "ENDITEM", 
+		"Name=seatPref", "Value={SeatingPreference}", "ENDITEM", 
+		"Name=seatType", "Value={TypeOfSeat}", "ENDITEM", 
 		"Name=.cgifields", "Value=roundtrip", "ENDITEM", 
 		"Name=.cgifields", "Value=seatType", "ENDITEM", 
 		"Name=.cgifields", "Value=seatPref", "ENDITEM", 
@@ -2683,7 +2708,7 @@ UC01_Find_Flight()
 		"Name=findFlights.y", "Value=10", "ENDITEM", 
 		"LAST");
 
-	lr_end_transaction("UC01_Fill_Find_Flight",2);
+	lr_end_transaction("UC01_TR01_Fill_Find_Flight",2);
 
 	return 0;
 }
@@ -2693,10 +2718,11 @@ UC01_Find_Flight()
 UCO3_Ordering()
 {
 
-	lr_think_time(39);
+	lr_think_time(10);
 
-	lr_start_transaction("UC03_TR01_Pick_Flight");
+	lr_start_transaction("UC03_TR00_Pick_Flight");
 
+	web_reg_find("Text=First Name", "LAST");
 	web_submit_data("reservations.pl_2", 
 		"Action=http://localhost:1080/cgi-bin/reservations.pl", 
 		"Method=POST", 
@@ -2715,12 +2741,13 @@ UCO3_Ordering()
 		"Name=reserveFlights.y", "Value=4", "ENDITEM", 
 		"LAST");
 
-	lr_end_transaction("UC03_TR01_Pick_Flight",2);
+	lr_end_transaction("UC03_TR00_Pick_Flight",2);
 
-	lr_think_time(52);
+	lr_think_time(10);
 
-	lr_start_transaction("UC03_TR02_Fill_Payment_Details");
+	lr_start_transaction("UC03_TR01_Fill_Payment_Details");
 
+	web_reg_find("Text=Thank you for booking through Web Tours.", "LAST");
 	web_submit_data("reservations.pl_3", 
 		"Action=http://localhost:1080/cgi-bin/reservations.pl", 
 		"Method=POST", 
@@ -2750,7 +2777,7 @@ UCO3_Ordering()
 		"Name=buyFlights.y", "Value=7", "ENDITEM", 
 		"LAST");
 
-	lr_end_transaction("UC03_TR02_Fill_Payment_Details",2);
+	lr_end_transaction("UC03_TR01_Fill_Payment_Details",2);
 
 	return 0;
 }
@@ -2760,10 +2787,11 @@ UCO3_Ordering()
 UC02_Check_After_Order()
 {
 
-	lr_think_time(35);
+	lr_think_time(10);
 
-	lr_start_transaction("UCO2_TR01_Button_Itinerary");
+	lr_start_transaction("UCO2_TR00_Button_Itinerary");
 
+	web_reg_find("Text=Flight Transaction Summary", "LAST");
 	web_url("welcome.pl_2", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
 		"TargetFrame=", 
@@ -2774,7 +2802,7 @@ UC02_Check_After_Order()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_end_transaction("UCO2_TR01_Button_Itinerary",2);
+	lr_end_transaction("UCO2_TR00_Button_Itinerary",2);
 
 	return 0;
 }
@@ -2783,27 +2811,27 @@ UC02_Check_After_Order()
 # 1 "UC04_Cancel.c" 1
 UC04_Cancel()
 {
+	lr_think_time(10);
 
-	lr_think_time(35);
+	lr_start_transaction("UC04_TR00_CancelPlease");
 
-	lr_start_transaction("UC04_TR01_Cancel_Order");
-
+	web_reg_find("Text=No flights have been reserved.", "LAST");
 	web_submit_data("itinerary.pl", 
 		"Action=http://localhost:1080/cgi-bin/itinerary.pl", 
 		"Method=POST", 
 		"TargetFrame=", 
 		"RecContentType=text/html", 
 		"Referer=http://localhost:1080/cgi-bin/itinerary.pl", 
-		"Snapshot=t56.inf", 
+		"Snapshot=t66.inf", 
 		"Mode=HTML", 
 		"ITEMDATA", 
-		"Name=flightID", "Value=160041495-798-JB", "ENDITEM", 
+		"Name=flightID", "Value=0-0-1B", "ENDITEM", 
 		"Name=.cgifields", "Value=1", "ENDITEM", 
-		"Name=removeAllFlights.x", "Value=63", "ENDITEM", 
-		"Name=removeAllFlights.y", "Value=9", "ENDITEM", 
+		"Name=removeAllFlights.x", "Value=71", "ENDITEM", 
+		"Name=removeAllFlights.y", "Value=13", "ENDITEM", 
 		"LAST");
 
-	lr_end_transaction("UC04_TR01_Cancel_Order",2);
+	lr_end_transaction("UC04_TR00_CancelPlease",2);
 
 	return 0;
 }
@@ -2813,10 +2841,11 @@ UC04_Cancel()
 UC02_Check_After_Cancel()
 {
 
-	lr_think_time(62);
+	lr_think_time(10);
 
-	lr_start_transaction("UCO2_TR02_Button_Itinerary");
+	lr_start_transaction("UCO2_TR01_Button_Itinerary");
 
+	web_reg_find("Text=No flights have been reserved.", "LAST");
 	web_url("welcome.pl_3", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
 		"TargetFrame=", 
@@ -2827,7 +2856,7 @@ UC02_Check_After_Cancel()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_end_transaction("UCO2_TR02_Button_Itinerary",2);
+	lr_end_transaction("UCO2_TR01_Button_Itinerary",2);
 
 	return 0;
 }
@@ -2837,10 +2866,11 @@ UC02_Check_After_Cancel()
 vuser_end()
 {
 
-	lr_think_time(23);
+	lr_think_time(10);
 
-	lr_start_transaction("UC00_TR02_Sign_off");
+	lr_start_transaction("UC00_TR01_Sign_off");
 
+	web_reg_find("Text=Welcome to the Web Tours site.", "LAST");
 	web_url("welcome.pl_4", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 
 		"TargetFrame=", 
@@ -2851,7 +2881,7 @@ vuser_end()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_end_transaction("UC00_TR02_Sign_off",2);
+	lr_end_transaction("UC00_TR01_Sign_off",2);
 
 	return 0;
 }

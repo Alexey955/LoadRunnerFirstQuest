@@ -27,12 +27,11 @@ vuser_init()
 		"Url=https://www.bing.com/favicon.ico", "Referer=", ENDITEM, 
 		LAST);
 
-//	web_set_sockets_option("SSL_VERSION", "2&3");
+	lr_think_time(10);
 
-	lr_think_time(17);
+	lr_start_transaction("UC00_TR00_Login");
 
-	lr_start_transaction("UC00_TR01_Login");
-
+	web_reg_find("Text=Using the menu to the left", LAST);
 	web_submit_data("login.pl", 
 		"Action=http://localhost:1080/cgi-bin/login.pl", 
 		"Method=POST", 
@@ -43,14 +42,14 @@ vuser_init()
 		"Mode=HTML", 
 		ITEMDATA, 
 		"Name=userSession", "Value={userSession}", ENDITEM, 
-		"Name=username", "Value=jojo", ENDITEM, 
-		"Name=password", "Value=bean", ENDITEM, 
+		"Name=username", "Value={Login}", ENDITEM, 
+		"Name=password", "Value={Password}", ENDITEM, 
 		"Name=JSFormSubmit", "Value=off", ENDITEM, 
 		"Name=login.x", "Value=27", ENDITEM, 
 		"Name=login.y", "Value=6", ENDITEM, 
 		LAST);
 
-	lr_end_transaction("UC00_TR01_Login",LR_AUTO);
+	lr_end_transaction("UC00_TR00_Login",LR_AUTO);
 
 	return 0;
 }

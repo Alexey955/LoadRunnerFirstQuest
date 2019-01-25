@@ -1,5 +1,5 @@
-EventId=2297
-RecordingNumber=11
+EventId=2542
+RecordingNumber=12
 
 ActionInfo
 ActionName=Action
@@ -180,7 +180,7 @@ EndActionInfo
 ActionName=UC04_Cancel
 ActionId=26
 ActionFileSize=12736
-ActionDeleted=0
+ActionDeleted=1
 RecordingNumber=11
 EndActionInfo
 
@@ -196,5 +196,12 @@ ActionId=28
 ActionFileSize=21835
 ActionDeleted=0
 RecordingNumber=11
+EndActionInfo
+
+ActionName=UC04_Cancel
+ActionId=29
+ActionFileSize=307068
+ActionDeleted=0
+RecordingNumber=12
 EndActionInfo
 

@@ -1,10 +1,11 @@
 UCO3_Ordering()
 {
 
-	lr_think_time(39);
+	lr_think_time(10);
 
-	lr_start_transaction("UC03_TR01_Pick_Flight");
+	lr_start_transaction("UC03_TR00_Pick_Flight");
 
+	web_reg_find("Text=First Name", LAST);
 	web_submit_data("reservations.pl_2", 
 		"Action=http://localhost:1080/cgi-bin/reservations.pl", 
 		"Method=POST", 
@@ -23,12 +24,13 @@ UCO3_Ordering()
 		"Name=reserveFlights.y", "Value=4", ENDITEM, 
 		LAST);
 
-	lr_end_transaction("UC03_TR01_Pick_Flight",LR_AUTO);
+	lr_end_transaction("UC03_TR00_Pick_Flight",LR_AUTO);
 
-	lr_think_time(52);
+	lr_think_time(10);
 
-	lr_start_transaction("UC03_TR02_Fill_Payment_Details");
+	lr_start_transaction("UC03_TR01_Fill_Payment_Details");
 
+	web_reg_find("Text=Thank you for booking through Web Tours.", LAST);
 	web_submit_data("reservations.pl_3", 
 		"Action=http://localhost:1080/cgi-bin/reservations.pl", 
 		"Method=POST", 
@@ -58,7 +60,7 @@ UCO3_Ordering()
 		"Name=buyFlights.y", "Value=7", ENDITEM, 
 		LAST);
 
-	lr_end_transaction("UC03_TR02_Fill_Payment_Details",LR_AUTO);
+	lr_end_transaction("UC03_TR01_Fill_Payment_Details",LR_AUTO);
 
 	return 0;
 }
