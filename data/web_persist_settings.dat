@@ -1,0 +1,29 @@
+[StartRecordingGMT]
+StartRecordingGMT_1=2019/01/25 08:12:34
+StartRecordingIsDst_1=0
+StartRecordingGMT_2=2019/01/25 08:19:25
+StartRecordingIsDst_2=0
+StartRecordingGMT_3=2019/01/25 08:24:32
+StartRecordingIsDst_3=0
+StartRecordingGMT_4=2019/01/25 09:18:12
+StartRecordingIsDst_4=0
+StartRecordingGMT_5=2019/01/25 09:34:55
+StartRecordingIsDst_5=0
+StartRecordingGMT_6=2019/01/25 09:47:49
+StartRecordingIsDst_6=0
+StartRecordingGMT_7=2019/01/25 09:53:28
+StartRecordingIsDst_7=0
+StartRecordingGMT_8=2019/01/25 09:58:03
+StartRecordingIsDst_8=0
+StartRecordingGMT_9=2019/01/25 10:00:33
+StartRecordingIsDst_9=0
+StartRecordingGMT_10=2019/01/25 10:20:30
+StartRecordingIsDst_10=0
+StartRecordingGMT_11=2019/01/25 10:21:31
+StartRecordingIsDst_11=0
+[UserHomePage]
+UserHomePage=http://go.microsoft.com/fwlink/p/?LinkId=255141
+[User-Agent]
+User-Agent=Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+[Security]
+UsingPersistForAuthentication=1

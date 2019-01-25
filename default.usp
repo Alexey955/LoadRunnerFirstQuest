@@ -1,7 +1,7 @@
 [Profile Actions]
 MercIniTreeFather=""
 MercIniTreeSectionName="Profile Actions"
-Profile Actions name=vuser_init,Action,vuser_end
+Profile Actions name=vuser_init,UC01_Find_Flight,UCO3_Ordering,UC02_Check_After_Order,UC04_Cancel,UC02_Check_After_Cancel,vuser_end
 [RunLogicEndRoot]
 MercIniTreeFather=""
 MercIniTreeSectionName="RunLogicEndRoot"
@@ -53,16 +53,40 @@ RunLogicObjectKind="Action"
 [RunLogicRunRoot]
 MercIniTreeFather=""
 MercIniTreeSectionName="RunLogicRunRoot"
-MercIniTreeSons="Action"
+MercIniTreeSons="UC01_Find_Flight,UCO3_Ordering,UC02_Check_After_Order,UC04_Cancel,UC02_Check_After_Cancel"
 Name="Run"
-RunLogicActionOrder="Action"
+RunLogicActionOrder="UC01_Find_Flight,UCO3_Ordering,UC02_Check_After_Order,UC04_Cancel,UC02_Check_After_Cancel"
 RunLogicActionType="VuserRun"
 RunLogicNumOfIterations="1"
 RunLogicObjectKind="Group"
 RunLogicRunMode="Sequential"
-[RunLogicRunRoot:Action]
+[RunLogicRunRoot:UC01_Find_Flight]
 MercIniTreeFather="RunLogicRunRoot"
-MercIniTreeSectionName="Action"
-Name="Action"
+MercIniTreeSectionName="UC01_Find_Flight"
+Name="UC01_Find_Flight"
+RunLogicActionType="VuserRun"
+RunLogicObjectKind="Action"
+[RunLogicRunRoot:UC02_Check_After_Cancel]
+MercIniTreeFather="RunLogicRunRoot"
+MercIniTreeSectionName="UC02_Check_After_Cancel"
+Name="UC02_Check_After_Cancel"
+RunLogicActionType="VuserRun"
+RunLogicObjectKind="Action"
+[RunLogicRunRoot:UC02_Check_After_Order]
+MercIniTreeFather="RunLogicRunRoot"
+MercIniTreeSectionName="UC02_Check_After_Order"
+Name="UC02_Check_After_Order"
+RunLogicActionType="VuserRun"
+RunLogicObjectKind="Action"
+[RunLogicRunRoot:UC04_Cancel]
+MercIniTreeFather="RunLogicRunRoot"
+MercIniTreeSectionName="UC04_Cancel"
+Name="UC04_Cancel"
+RunLogicActionType="VuserRun"
+RunLogicObjectKind="Action"
+[RunLogicRunRoot:UCO3_Ordering]
+MercIniTreeFather="RunLogicRunRoot"
+MercIniTreeSectionName="UCO3_Ordering"
+Name="UCO3_Ordering"
 RunLogicActionType="VuserRun"
 RunLogicObjectKind="Action"
