@@ -1,47 +1,47 @@
 [
     {
         "transactionName": "UC00_TR00_Login",
-        "rawStartTime": 1548429241193,
-        "rawEndTime": 1548429241362
+        "rawStartTime": 1548504669468,
+        "rawEndTime": 1548504669669
     },
     {
         "transactionName": "UC01_TR00_Button_Flights",
-        "rawStartTime": 1548429241391,
-        "rawEndTime": 1548429241559
+        "rawStartTime": 1548504669687,
+        "rawEndTime": 1548504669833
     },
     {
         "transactionName": "UC01_TR01_Fill_Find_Flight",
-        "rawStartTime": 1548429241575,
-        "rawEndTime": 1548429241681
+        "rawStartTime": 1548504669842,
+        "rawEndTime": 1548504669956
     },
     {
         "transactionName": "UC03_TR00_Pick_Flight",
-        "rawStartTime": 1548429241768,
-        "rawEndTime": 1548429242062
+        "rawStartTime": 1548504669989,
+        "rawEndTime": 1548504670168
     },
     {
         "transactionName": "UC03_TR01_Fill_Payment_Details",
-        "rawStartTime": 1548429242080,
-        "rawEndTime": 1548429242260
+        "rawStartTime": 1548504670176,
+        "rawEndTime": 1548504670443
     },
     {
         "transactionName": "UCO2_TR00_Button_Itinerary",
-        "rawStartTime": 1548429242298,
-        "rawEndTime": 1548429242615
+        "rawStartTime": 1548504670474,
+        "rawEndTime": 1548504670803
     },
     {
-        "transactionName": "UC04_TR00_CancelPlease",
-        "rawStartTime": 1548429242659,
-        "rawEndTime": 1548429242749
+        "transactionName": "UCO4_TR00_Cancel_Flight",
+        "rawStartTime": 1548504670848,
+        "rawEndTime": 1548504670951
     },
     {
         "transactionName": "UCO2_TR01_Button_Itinerary",
-        "rawStartTime": 1548429242795,
-        "rawEndTime": 1548429243130
+        "rawStartTime": 1548504670989,
+        "rawEndTime": 1548504671258
     },
     {
         "transactionName": "UC00_TR01_Sign_off",
-        "rawStartTime": 1548429243155,
-        "rawEndTime": 1548429243455
+        "rawStartTime": 1548504671288,
+        "rawEndTime": 1548504671610
     }
 ]

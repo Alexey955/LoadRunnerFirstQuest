@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Users\user\Documents\VuGen\Scripts\UC00_First_Quest_Vasiliev
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\logfile.log
+d:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\combined_UC00_First_Quest_Vasiliev.c
+d:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\pre_cci.c

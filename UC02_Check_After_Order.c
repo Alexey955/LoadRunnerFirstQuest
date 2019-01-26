@@ -4,6 +4,9 @@ UC02_Check_After_Order()
 	lr_think_time(10);
 
 	lr_start_transaction("UCO2_TR00_Button_Itinerary");
+	
+	web_reg_save_param("cgifields","lb=name=\".cgifields\" value=\"","rb=\"  />","ord=all",LAST);
+	web_reg_save_param("flightID","lb=name=\"flightID\" value=\"","rb=\"  />","ord=all",LAST);
 
 	web_reg_find("Text=Flight Transaction Summary", LAST);
 	web_url("welcome.pl_2", 

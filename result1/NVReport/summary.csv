@@ -1,16 +1,16 @@
 Transaction Name,Flow Name,Packet List Name,Transaction Duration (seconds),Network Time (seconds) ,Throughput Up (KB),Throughput Down (KB),Number of Requests,Errors,Analysis Score (Desktop) ,Analysis Score (Mobile) ,Transaction HTML Report Name
-vuser_init_Transaction,,,2,1,1,1,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report0.html
+vuser_init_Transaction,,,1,8,1,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report0.html
 UC00_TR00_Login,,,0,2,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report1.html
-UC01_Find_Flight_Transaction,,,0,4,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report2.html
-UC01_TR00_Button_Flights,,,0,2,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report3.html
+UC01_Find_Flight_Transaction,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report2.html
+UC01_TR00_Button_Flights,,,0,1,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report3.html
 UC01_TR01_Fill_Find_Flight,,,0,1,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report4.html
 UCO3_Ordering_Transaction,,,0,5,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report5.html
-UC03_TR00_Pick_Flight,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report6.html
-UC03_TR01_Fill_Payment_Details,,,0,2,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report7.html
-UC02_Check_After_Order_Transaction,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report8.html
+UC03_TR00_Pick_Flight,,,0,2,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report6.html
+UC03_TR01_Fill_Payment_Details,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report7.html
+UC02_Check_After_Order_Transaction,,,0,4,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report8.html
 UCO2_TR00_Button_Itinerary,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report9.html
 UC04_Cancel_Transaction,,,0,1,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report10.html
-UC04_TR00_CancelPlease,,,0,1,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report11.html
+UCO4_TR00_Cancel_Flight,,,0,1,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report11.html
 UC02_Check_After_Cancel_Transaction,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report12.html
 UCO2_TR01_Button_Itinerary,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report13.html
 vuser_end_Transaction,,,0,3,0,0,0,0,0,0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report14.html

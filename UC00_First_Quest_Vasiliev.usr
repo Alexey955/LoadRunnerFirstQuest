@@ -70,7 +70,7 @@ UC04_Cancel=cci
 UC02_Check_After_Cancel=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="UC00_TR00_Login__*delimiter*__UC01_TR00_Button_Flights__*delimiter*__UC01_TR01_Fill_Find_Flight__*delimiter*__UC03_TR00_Pick_Flight__*delimiter*__UC03_TR01_Fill_Payment_Details__*delimiter*__UCO2_TR00_Button_Itinerary__*delimiter*__UC04_TR00_CancelPlease__*delimiter*__UCO2_TR01_Button_Itinerary__*delimiter*__UC00_TR01_Sign_off"
+Order="UC00_TR00_Login__*delimiter*__UC01_TR00_Button_Flights__*delimiter*__UC01_TR01_Fill_Find_Flight__*delimiter*__UC03_TR00_Pick_Flight__*delimiter*__UC03_TR01_Fill_Payment_Details__*delimiter*__UCO2_TR00_Button_Itinerary__*delimiter*__UCO4_TR00_Cancel_Flight__*delimiter*__UCO2_TR01_Button_Itinerary__*delimiter*__UC00_TR01_Sign_off"
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
@@ -83,6 +83,6 @@ UC01_TR01_Fill_Find_Flight=
 UC03_TR00_Pick_Flight=
 UC03_TR01_Fill_Payment_Details=
 UCO2_TR00_Button_Itinerary=
-UC04_TR00_CancelPlease=
+UCO4_TR00_Cancel_Flight=
 UCO2_TR01_Button_Itinerary=
 UC00_TR01_Sign_off=

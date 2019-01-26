@@ -2561,8 +2561,12 @@ void
 
 
 
+
+
  
  
+
+
 
 
 
@@ -2790,6 +2794,9 @@ UC02_Check_After_Order()
 	lr_think_time(10);
 
 	lr_start_transaction("UCO2_TR00_Button_Itinerary");
+	
+	web_reg_save_param("cgifields","lb=name=\".cgifields\" value=\"","rb=\"  />","ord=all","LAST");
+	web_reg_save_param("flightID","lb=name=\"flightID\" value=\"","rb=\"  />","ord=all","LAST");
 
 	web_reg_find("Text=Flight Transaction Summary", "LAST");
 	web_url("welcome.pl_2", 
@@ -2811,27 +2818,49 @@ UC02_Check_After_Order()
 # 1 "UC04_Cancel.c" 1
 UC04_Cancel()
 {
-	lr_think_time(10);
+	int i;
 
-	lr_start_transaction("UC04_TR00_CancelPlease");
-
-	web_reg_find("Text=No flights have been reserved.", "LAST");
+	lr_start_transaction("UCO4_TR00_Cancel_Flight");
 	web_submit_data("itinerary.pl", 
 		"Action=http://localhost:1080/cgi-bin/itinerary.pl", 
 		"Method=POST", 
 		"TargetFrame=", 
 		"RecContentType=text/html", 
 		"Referer=http://localhost:1080/cgi-bin/itinerary.pl", 
-		"Snapshot=t66.inf", 
+		"Snapshot=t84.inf", 
 		"Mode=HTML", 
 		"ITEMDATA", 
-		"Name=flightID", "Value=0-0-1B", "ENDITEM", 
-		"Name=.cgifields", "Value=1", "ENDITEM", 
-		"Name=removeAllFlights.x", "Value=71", "ENDITEM", 
-		"Name=removeAllFlights.y", "Value=13", "ENDITEM", 
+		"Name=1", "Value=on", "ENDITEM", 
+ 
+ 
+		"Name=flightID", "Value={flightID_1}", "ENDITEM", 
+		"Name=.cgifields", "Value={cgifields_1}", "ENDITEM", 
+		"Name=removeFlights.x", "Value=44", "ENDITEM", 
+		"Name=removeFlights.y", "Value=13", "ENDITEM", 
 		"LAST");
 
-	lr_end_transaction("UC04_TR00_CancelPlease",2);
+	lr_end_transaction("UCO4_TR00_Cancel_Flight",2);
+
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+
+	lr_think_time(8);
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 	return 0;
 }
