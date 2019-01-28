@@ -1,0 +1,5 @@
+d:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\pre_cci.c: UC01_Find_Flight.c:133: warning: missing return value
+d:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\pre_cci.c: UC01_Find_Flight.c:145: warning: missing return value
+d:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\pre_cci.c: UC03_Ordering.c:48: warning: missing return value
+d:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\pre_cci.c: UC04_Cancel.c:37: warning: missing return value
+d:\users\user\documents\vugen\scripts\uc00_first_quest_vasiliev\\pre_cci.c: UC04_Cancel.c:52: warning: missing return value

@@ -1,5 +1,5 @@
-EventId=3066
-RecordingNumber=14
+EventId=5528
+RecordingNumber=24
 
 ActionInfo
 ActionName=Action
@@ -152,14 +152,14 @@ EndActionInfo
 ActionName=vuser_init
 ActionId=22
 ActionFileSize=151990
-ActionDeleted=0
+ActionDeleted=1
 RecordingNumber=11
 EndActionInfo
 
 ActionName=UC01_Find_Flight
 ActionId=23
 ActionFileSize=61997
-ActionDeleted=0
+ActionDeleted=1
 RecordingNumber=11
 EndActionInfo
 
@@ -187,14 +187,14 @@ EndActionInfo
 ActionName=UC02_Check_After_Cancel
 ActionId=27
 ActionFileSize=25518
-ActionDeleted=0
+ActionDeleted=1
 RecordingNumber=11
 EndActionInfo
 
 ActionName=vuser_end
 ActionId=28
 ActionFileSize=21835
-ActionDeleted=0
+ActionDeleted=1
 RecordingNumber=11
 EndActionInfo
 
@@ -203,5 +203,40 @@ ActionId=29
 ActionFileSize=338743
 ActionDeleted=0
 RecordingNumber=14
+EndActionInfo
+
+ActionName=UC02_Check_After_Cancel
+ActionId=30
+ActionFileSize=357984
+ActionDeleted=0
+RecordingNumber=23
+EndActionInfo
+
+ActionName=vuser_init
+ActionId=31
+ActionFileSize=156613
+ActionDeleted=0
+RecordingNumber=24
+EndActionInfo
+
+ActionName=UC01_Find_Flight
+ActionId=32
+ActionFileSize=74050
+ActionDeleted=0
+RecordingNumber=24
+EndActionInfo
+
+ActionName=UC02_Check_Order
+ActionId=33
+ActionFileSize=44225
+ActionDeleted=0
+RecordingNumber=24
+EndActionInfo
+
+ActionName=vuser_end
+ActionId=34
+ActionFileSize=21835
+ActionDeleted=0
+RecordingNumber=24
 EndActionInfo
 

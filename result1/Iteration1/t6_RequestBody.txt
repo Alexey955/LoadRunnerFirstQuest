@@ -1,4 +1,3 @@
-"firstName=Jojo&lastName=Bean&address1=Pushkina&address2=Moskow&pass1=Jojo+Bean&creditCard=9876"
-"54321&expDate=25.22&oldCCOption=&numPassengers=1&seatType=Business&seatPref=Window&outboundFli"
-"ght=120%3B385%3B01%2F26%2F2019&advanceDiscount=0&returnFlight=&JSFormSubmit=off&.cgifields=sav"
-"eCC&buyFlights.x=76&buyFlights.y=7"
+"advanceDiscount=0&depart=Los+Angeles&departDate=02%2F06%2F2019&arrive=Frankfurt&returnDate=02%"
+"2F07%2F2019&numPassengers=1&seatPref=None&seatType=Coach&.cgifields=roundtrip&.cgifields=seatT"
+"ype&.cgifields=seatPref&findFlights.x=34&findFlights.y=14"

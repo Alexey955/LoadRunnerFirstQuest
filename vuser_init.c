@@ -14,42 +14,41 @@ vuser_init()
 	                   "LB=\"userSession\" value=\"",
 	                   "RB=\"/>",
 	                   LAST);
-
+	
 	web_url("WebTours", 
 		"URL=http://localhost:1080/WebTours", 
 		"TargetFrame=", 
 		"Resource=0", 
 		"RecContentType=text/html", 
 		"Referer=", 
-		"Snapshot=t49.inf", 
+		"Snapshot=t186.inf", 
 		"Mode=HTML", 
 		EXTRARES, 
 		"Url=https://www.bing.com/favicon.ico", "Referer=", ENDITEM, 
 		LAST);
 
-	lr_think_time(10);
+	lr_think_time(20);
 
-	lr_start_transaction("UC00_TR00_Login");
+	lr_start_transaction("UC00_Login");
 
-	web_reg_find("Text=Using the menu to the left", LAST);
 	web_submit_data("login.pl", 
 		"Action=http://localhost:1080/cgi-bin/login.pl", 
 		"Method=POST", 
 		"TargetFrame=body", 
 		"RecContentType=text/html", 
 		"Referer=http://localhost:1080/cgi-bin/nav.pl?in=home", 
-		"Snapshot=t50.inf", 
+		"Snapshot=t187.inf", 
 		"Mode=HTML", 
 		ITEMDATA, 
 		"Name=userSession", "Value={userSession}", ENDITEM, 
 		"Name=username", "Value={Login}", ENDITEM, 
 		"Name=password", "Value={Password}", ENDITEM, 
 		"Name=JSFormSubmit", "Value=off", ENDITEM, 
-		"Name=login.x", "Value=27", ENDITEM, 
-		"Name=login.y", "Value=6", ENDITEM, 
+		"Name=login.x", "Value=62", ENDITEM, 
+		"Name=login.y", "Value=12", ENDITEM, 
 		LAST);
 
-	lr_end_transaction("UC00_TR00_Login",LR_AUTO);
+	lr_end_transaction("UC00_Login",LR_AUTO);
 
 	return 0;
 }

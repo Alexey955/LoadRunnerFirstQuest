@@ -1,0 +1,8 @@
+[vuser_init]
+SnapshotIndex=I25_vuser_init
+[UC03_Ordering]
+SnapshotIndex=I25_UC03_Ordering
+[UC01_Find_Flight]
+SnapshotIndex=I25_UC01_Find_Flight
+[UC02_Check_Order]
+SnapshotIndex=I25_UC02_Check_Order

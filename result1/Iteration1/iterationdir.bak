@@ -1,12 +1,4 @@
 [vuser_init]
 SnapshotIndex=I1_vuser_init
-[UC04_Cancel]
-SnapshotIndex=I1_UC04_Cancel
-[UC02_Check_After_Cancel]
-SnapshotIndex=I1_UC02_Check_After_Cancel
-[UC02_Check_After_Order]
-SnapshotIndex=I1_UC02_Check_After_Order
 [UC01_Find_Flight]
 SnapshotIndex=I1_UC01_Find_Flight
-[UCO3_Ordering]
-SnapshotIndex=I1_UCO3_Ordering

@@ -1,0 +1,27 @@
+[
+    {
+        "transactionName": "UC00_Login",
+        "rawStartTime": 1548685138735,
+        "rawEndTime": 1548685139173
+    },
+    {
+        "transactionName": "UC00_TR01_Flights",
+        "rawStartTime": 1548685139208,
+        "rawEndTime": 1548685139672
+    },
+    {
+        "transactionName": "UC01_TR01_Find_Flight",
+        "rawStartTime": 1548685139684,
+        "rawEndTime": 1548685139814
+    },
+    {
+        "transactionName": "UC00_TR01_Sign_Off",
+        "rawStartTime": 1548685139840,
+        "rawEndTime": 1548685140051
+    },
+    {
+        "transactionName": "UC02_TR00_Itinerary",
+        "rawStartTime": 1548685140099,
+        "rawEndTime": 1548685140602
+    }
+]

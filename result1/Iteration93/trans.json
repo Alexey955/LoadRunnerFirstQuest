@@ -1,0 +1,42 @@
+[
+    {
+        "transactionName": "UC00_Login",
+        "rawStartTime": 1548685135902,
+        "rawEndTime": 1548685136481
+    },
+    {
+        "transactionName": "UC00_TR01_Flights",
+        "rawStartTime": 1548685136513,
+        "rawEndTime": 1548685136720
+    },
+    {
+        "transactionName": "UC01_TR01_Find_Flight",
+        "rawStartTime": 1548685136732,
+        "rawEndTime": 1548685136882
+    },
+    {
+        "transactionName": "UC03_TR00_Reservation_Tickets",
+        "rawStartTime": 1548685136925,
+        "rawEndTime": 1548685137232
+    },
+    {
+        "transactionName": "UC03_TR01_Payment_Details",
+        "rawStartTime": 1548685137234,
+        "rawEndTime": 1548685137532
+    },
+    {
+        "transactionName": "UC02_TR00_Itinerary",
+        "rawStartTime": 1548685137563,
+        "rawEndTime": 1548685137883
+    },
+    {
+        "transactionName": "UC00_TR01_Sign_Off",
+        "rawStartTime": 1548685137896,
+        "rawEndTime": 1548685138112
+    },
+    {
+        "transactionName": "UC02_TR00_Itinerary",
+        "rawStartTime": 1548685138154,
+        "rawEndTime": 1548685138354
+    }
+]

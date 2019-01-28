@@ -1,0 +1,6 @@
+[vuser_init]
+SnapshotIndex=I11_vuser_init
+[UC01_Find_Flight]
+SnapshotIndex=I11_UC01_Find_Flight
+[vuser_end]
+SnapshotIndex=I11_vuser_end

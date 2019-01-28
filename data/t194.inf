@@ -1,0 +1,15 @@
+[t194]
+FileName1=t194.htm
+URL1=http://localhost:1080/cgi-bin/welcome.pl?signOff=1
+Total=2
+RequestHeaderFile=t194_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t194_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_194.xml
+FileName2=t194f0.htm
+URL2=http://localhost:1080/cgi-bin/nav.pl?in=home
+FrameIndex2=0.0
+UseFrameIndex=1
+[ProtocolInfo]
+ProtocolId=QTWeb

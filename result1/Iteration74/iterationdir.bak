@@ -1,0 +1,10 @@
+[UC04_Cancel]
+SnapshotIndex=I74_UC04_Cancel
+[vuser_init]
+SnapshotIndex=I74_vuser_init
+[UC03_Ordering]
+SnapshotIndex=I74_UC03_Ordering
+[UC01_Find_Flight]
+SnapshotIndex=I74_UC01_Find_Flight
+[UC02_Check_Order]
+SnapshotIndex=I74_UC02_Check_Order
